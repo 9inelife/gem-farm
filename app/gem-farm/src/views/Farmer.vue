@@ -1,13 +1,19 @@
 <template>
   <ConfigPane />
-  <div v-if="!wallet" class="text-center">Pls connect (burner) wallet</div>
+  <div v-if="!wallet" class="text-center" style="font-size:17px;">Please connect (burner) wallet</div>
   <div v-else>
     <!--farm address-->
     <div class="nes-container with-title mb-10">
-      <p class="title">Connect to a Farm</p>
+      <p class="title">Connect to a Farm</p><br>
+      <span>Copy Spotter Farm Address:</span>
+     
+       <div class="mom mb-5 nes-input">
+      <p>DpkHSv9AWsP8h4x4miLt6WEHibRtM1REtPDDyaCkJ1FS</p>
+      </div>
+      
       <div class="nes-field mb-5">
-        <label for="farm">Farm address:</label>
-        <input id="farm" class="nes-input" v-model="farm" />
+        <label for="farm"  style=" color: white; border-radius: 1rem; background-color: black;">Farm address:</label>
+        <input id="farm" class="nes-input mom" v-model="farm" placeholder="paste farm address"/>
       </div>
     </div>
 
@@ -56,17 +62,18 @@
           End cooldown
         </button>
         <button class="nes-btn is-warning" @click="claim">
-          Claim {{ availableA }} A / {{ availableB }} B
+          Claim  {{ availableB }} Spn
         </button>
       </Vault>
     </div>
     <div v-else>
       <div class="w-full text-center mb-5">
-        Farmer account not found :( Create a new one?
+      <p>Farmer account not found </p>
+        <p> Farmer account not found :( Create a new one )</p>
       </div>
-      <div class="w-full text-center">
+      <div class="w-full text-center" style="text-align:center;">
         <button class="nes-btn is-primary" @click="initFarmer">
-          New Farmer
+         Create New Farmer account
         </button>
       </div>
     </div>
@@ -263,4 +270,64 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.text-center{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+  width: 100%;
+  padding: 7px;
+  
+}
+
+.nes-field{
+  display: flex;
+ 
+   padding: 5px;
+
+}
+.title{
+   color: white;
+ 
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+.nes-btn {
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color:   #e2a004;
+   border-radius:1rem;
+   border:1px solid black;
+
+}
+.nes-input{
+  padding: 5px;
+  border: 1px solid  #e2a004 ;
+  display: flex;
+  width: 100%;
+  background-color: #131212;
+
+}
+ .mom{
+    overflow-x: scroll;
+  }
+
+
+.nes-container{
+  color: white;
+   border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+</style>

@@ -9,7 +9,7 @@
           <input type="text" id="mintA" class="nes-input" v-model="mintA" />
         </div>
         <div class="nes-select w-1/4">
-          <select v-model="typeA">
+          <select v-model="typeA" class="nes-selects">
             <option :value="RewardType.Variable">Variable</option>
             <option :value="RewardType.Fixed">Fixed</option>
           </select>
@@ -22,7 +22,7 @@
           <input type="text" id="mintB" class="nes-input" v-model="mintB" />
         </div>
         <div class="nes-select w-1/4">
-          <select v-model="typeB">
+          <select v-model="typeB"  class="nes-selects">
             <option :value="RewardType.Variable">Variable</option>
             <option :value="RewardType.Fixed">Fixed</option>
           </select>
@@ -57,7 +57,7 @@
         />
       </div>
       <button class="nes-btn is-primary mb-5" type="submit">Start farm*</button>
-      <p class="mb-5">* this creates an associated Gem Bank automatically</p>
+      <p class="mb-5">* this creates an associated Spotter Bank automatically</p>
     </form>
   </div>
 </template>
@@ -131,4 +131,67 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.text-center{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+  width: 100%;
+  padding: 7px;
+  
+}
+.nes-field{
+  display: flex;
+ 
+   padding: 5px;
+
+}
+.title{
+   color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+.nes-input{
+  padding: 5px;
+  border: 1px solid  #e2a004 ;
+  
+  width: 100%;
+  background-color: #131212;
+
+}
+
+.nes-container{
+  color: white;
+   border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+
+.nes-selects{
+    background-color:black; 
+  padding: 5px;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+}
+.nes-btn {
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color:   #e2a004;
+   border-radius:1rem;
+   border:1px solid black;
+
+}
+
+</style>

@@ -59,4 +59,5 @@ img {
   @apply border-4 border-solid;
   border-color: black !important;
 }
+
 </style>

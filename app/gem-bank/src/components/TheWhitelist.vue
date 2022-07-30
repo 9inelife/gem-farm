@@ -2,13 +2,13 @@
   <div class="nes-container with-title">
     <p class="title">Whitelist settings</p>
     <form @submit.prevent="updateWhitelist">
-      <label>
+      <label style=" width:50%;">
         <input type="radio" class="nes-radio" value="add" v-model="action" />
-        <span>Add</span>
+        <span style="color:#fcbb1f ; ">Add</span>
       </label>
-      <label>
+      <label style=" width:50%;">
         <input type="radio" class="nes-radio" value="remove" v-model="action" />
-        <span>Remove</span>
+        <span style="color:#fcbb1f ;">Remove</span>
       </label>
 
       <div class="nes-field class=mt-5">
@@ -17,23 +17,23 @@
       </div>
 
       <div class="mt-5">
-        <label>
+        <label style=" width:50%;">
           <input
             type="radio"
             class="nes-radio"
             :value="WhitelistType.Creator"
             v-model="type"
           />
-          <span>Creator</span>
+          <span style="color:#fcbb1f ; ">Creator</span>
         </label>
-        <label>
+        <label style=" width:50%;">
           <input
             type="radio"
             class="nes-radio"
             :value="WhitelistType.Mint"
             v-model="type"
           />
-          <span>Mint</span>
+          <span style="color: #fcbb1f ;">Mint</span>
         </label>
       </div>
 
@@ -142,4 +142,25 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.nes-container{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+.nes-radio{
+ 
+}
+.nes-input{
+  padding: 5px;
+  border: 1px solid #fcbb1f ;
+  
+  width: 100%;
+  background-color: #131212;
+
+}
+</style>

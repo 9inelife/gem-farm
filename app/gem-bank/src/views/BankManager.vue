@@ -88,4 +88,13 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.text-center{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+  padding: 7px;
+}
+
+</style>

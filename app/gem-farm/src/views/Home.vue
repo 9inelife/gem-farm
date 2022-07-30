@@ -1,52 +1,31 @@
 <template>
-  <div class="nes-container with-title mb-10">
-    <p class="title">Welcome</p>
-    <p>Welcome to Gem Farm 💎 - the #1 NFT Staking solution on Solana!</p>
-    <p class="mt-5">
-      This front-end is primarily designed for the Farm Manager (most likely the
-      dev behind the NFT project). You probably want to build a nicer front-end
-      for your stakers (farmers 👩‍🌾).
+<p class="spot">WELCOME SPOTTER </p>
+
+<!-- <p class="spot">stake your NFTs</p> -->
+  
+     <div >
+     <!-- class="nes-containe with-title mb-10" -->
+    <p class="mt-5 bom">
+      Spotter Farm Address is Deployed At:
     </p>
-    <p class="mt-5">
-      That said, if you're a staker, in theory nothing is stopping you from
-      using this front-end to access ALL the farms you're staking with. Simply
-      go to the
-      <router-link to="/farmer" class="text-blue-700">farmer</router-link> tab
-      and enter the farm address (ask your NFT project for it).
-    </p>
-    <p class="mt-5">
-      You can find the docs
-      <a class="text-blue-600" href="https://docs.gemworks.gg/" target="_blank"
-        >here</a
-      >.
-    </p>
-    <p class="mt-5">
-      Gem Farm is deployed at:
-      <span class="bg-yellow-100">{{ GEM_FARM_PROG_ID }}</span>
-    </p>
-  </div>
-  <div class="flex flex-row">
-    <div class="nes-container with-title flex-1 mr-5">
-      <p class="title">Start/manage a farm</p>
-      <p class="mb-5">
-        Choose this if you have your own NFT collection you'd like to offer
-        staking for.
-      </p>
-      <router-link to="manager">
-        <button class="nes-btn is-primary">Start a farm</button>
-      </router-link>
-    </div>
-    <div class="nes-container with-title flex-1 ml-5">
-      <p class="title">Stake your NFTs</p>
-      <p class="mb-5">
-        Choose this if you'd like to stake your NFTs at one of the existing
-        farms.
-      </p>
-      <router-link to="farmer">
-        <button class="nes-btn is-primary">Stake NFTs</button>
-      </router-link>
+    <!-- <div class="nes-field mb-10">
+    <p class="mom">{{ GEM_FARM_PROG_ID }}</p>
+    </div> -->
+     <div class="mom mb-5 nes-input">
+    <p >DpkHSv9AWsP8h4x4miLt6WEHibRtM1REtPDDyaCkJ1FS </p>
     </div>
   </div>
+
+  
+   
+    <div class="nes-container with-title ">
+      <p class="title">Start your staking Journey!!!</p>
+    
+      <router-link to="farmer"><br>
+        <button class="nes-btn is-primary">Start</button>
+      </router-link>
+    </div>
+  
 </template>
 
 <script lang="ts">
@@ -60,4 +39,85 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped></style>
+<style scoped>
+.nes-btn {
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color:   #e2a004;
+   border-radius:1rem;
+   border:1px solid black;
+
+}
+  
+.spot{
+  color: #fcbb1f;
+  font-weight: bolder;
+  font-size: x-large;
+}
+.sop{
+  font-size: medium;
+ 
+}
+p{
+  color: white;
+
+}
+p:hover{
+  color: white; 
+}
+ .so{
+    color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+  padding: 10px;
+ }
+
+.text-center{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+  width: 100%;
+  padding: 7px;
+  
+}
+.nes-field{
+  display: flex;
+ 
+   padding: 5px;
+
+}
+.nes-container{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+.nes-input{
+  padding: 5px;
+  border: 1px solid  #e2a004 ;
+  display: flex;
+  width: 100%;
+  background-color: #131212;
+
+}
+   .mom{
+    overflow-x: scroll;
+  }
+
+
+.spot{
+  text-align: center;
+}
+.bom{
+   text-align: center;
+}
+</style>

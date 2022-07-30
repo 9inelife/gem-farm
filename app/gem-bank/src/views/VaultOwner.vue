@@ -4,10 +4,10 @@
   <div v-else>
     <!--bank address-->
     <div class="nes-container with-title mb-10">
-      <p class="title">Connect to a Bank</p>
+      <p class="title">Connect to a Bank</p><br><br>
       <div class="nes-field mb-5">
-        <label for="farm">Bank address:</label>
-        <input id="farm" class="nes-input" v-model="bank" />
+        <label for="farm" style=" color: white; border-radius: 1rem; background-color: black;">Bank address:</label>
+        <input id="farm" class="nes-input" v-model="bank" placeholder="Paste Bank Address"/>
       </div>
       <div v-if="vault">Vault found: {{ vault }}</div>
     </div>
@@ -23,7 +23,7 @@
           class="nes-btn is-primary mx-5"
           @click="moveNFTsOnChain"
         >
-          Move Gems!
+         Click to Move Spotters!
         </button>
       </div>
 
@@ -57,9 +57,9 @@
         </NFTGrid>
       </div>
     </div>
-    <div v-else class="flex-1 text-center">
+    <div v-else class="flex-1 ">
       <button class="nes-btn is-primary" @click="createVault">
-        Create vault
+       Click to Create vault
       </button>
     </div>
   </div>
@@ -342,5 +342,57 @@ export default defineComponent({
   left: 0;
   opacity: 0.7;
   z-index: 10;
+}
+.text-center{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+  width: 100%;
+  padding: 7px;
+  
+}
+.nes-field{
+  display: flex;
+ 
+   padding: 5px;
+
+}
+.title{
+   color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+.nes-input{
+  padding: 5px;
+  border: 1px solid  #e2a004 ;
+  
+  width: 100%;
+  background-color: #131212;
+
+}
+.nes-btn {
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color:   #e2a004;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 124, 5);
+}
+
+.nes-btn:hover {background-color:  #dda72a}
+
+.nes-btn:active {
+  background-color:  #fcbb1f;
+  box-shadow: 0 5px rgb(163, 124, 5);
+  transform: translateY(4px);
 }
 </style>

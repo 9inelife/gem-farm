@@ -22,7 +22,7 @@ export default defineComponent({
     const path = computed(() => route.path);
 
     const menu = [
-      { name: '/', url: '/' },
+      { name: 'SPOTTER DAPP', url: '/' },
       { name: 'BANK MANAGER', url: '/bank' },
       { name: 'VAULT OWNER', url: '/vault' },
     ];

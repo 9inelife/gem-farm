@@ -1,11 +1,11 @@
 <template>
-  <div class="nes-container with-title">
+  <div class="nes-containers ">
     <p class="title">Manage Vaults</p>
     <div v-if="fetchedVaultList && fetchedVaultList.length">
       <!--selector-->
       <p class="mb-2">Choose vault:</p>
-      <div class="nes-select mb-5">
-        <select v-model="selectedVault">
+      <div class="nes-select mb-5" >
+        <select v-model="selectedVault" style="background-color:rgb(36, 34, 34);">
           <option :id="v.publicKey.toBase58()" v-for="v in fetchedVaultList">
             {{ v.publicKey.toBase58() }}
           </option>
@@ -19,14 +19,14 @@
         :vaultAcc="selectedVaultAcc"
       />
       <!--vault lock-->
-      <button class="nes-btn is-primary mb-5" @click="setVaultLock">
-        {{ parseVaultLock() ? 'Unlock' : 'Lock' }} vault
+      <button class="nes-btn is-primary mb-5" @click="setVaultLock" >
+        {{ parseVaultLock() ? 'click to Unlock' : 'click to Lock' }} vault
       </button>
       <!--vault contents-->
       <div>
         <NFTGrid
           class="nes-container with-title"
-          title="Vault contents"
+          title="Vault contents(Holding NFts)"
           :nfts="fetchedVaultNFTs"
         >
           <div
@@ -165,5 +165,35 @@ export default defineComponent({
   left: 0;
   opacity: 0.7;
   z-index: 10;
+}
+.nes-containers{
+  color: white;
+   border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+
+.nes-btn {
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color:  black;
+  background-color:  #fcbb1f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 124, 5);
+}
+
+.nes-btn:hover {background-color:  #dda72a}
+
+.nes-btn:active {
+  background-color:  #fcbb1f;
+  box-shadow: 0 5px rgb(163, 124, 5);
+  transform: translateY(4px);
 }
 </style>

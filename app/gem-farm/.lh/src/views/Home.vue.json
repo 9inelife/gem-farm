@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/views/Home.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1652555867269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1652555867269,
+            "name": "Commit-0",
+            "content": "<template>\n  <div class=\"nes-container with-title mb-10\">\n    <p class=\"title\">Welcome</p>\n    <p>Welcome to Gem Farm 💎 - the #1 NFT Staking solution on Solana!</p>\n    <p class=\"mt-5\">\n      This front-end is primarily designed for the Farm Manager (most likely the\n      dev behind the NFT project). You probably want to build a nicer front-end\n      for your stakers (farmers 👩‍🌾).\n    </p>\n    <p class=\"mt-5\">\n      That said, if you're a staker, in theory nothing is stopping you from\n      using this front-end to access ALL the farms you're staking with. Simply\n      go to the\n      <router-link to=\"/farmer\" class=\"text-blue-700\">farmer</router-link> tab\n      and enter the farm address (ask your NFT project for it).\n    </p>\n    <p class=\"mt-5\">\n      \n      <a class=\"text-blue-600\" href=\"#\" target=\"_blank\"\n        ></a\n      >.\n    </p>\n    <p class=\"mt-5\">\n      Gem Farm is deployed at:\n      <span class=\"bg-yellow-100\">{{ GEM_FARM_PROG_ID }}</span>\n    </p>\n  </div>\n  <div class=\"flex flex-row\">\n    <div class=\"nes-container with-title flex-1 mr-5\">\n      <p class=\"title\">Start/manage a farm</p>\n      <p class=\"mb-5\">\n        Choose this if you have your own NFT collection you'd like to offer\n        staking for.\n      </p>\n      <router-link to=\"manager\">\n        <button class=\"nes-btn is-primary\">Start a farm</button>\n      </router-link>\n    </div>\n    <div class=\"nes-container with-title flex-1 ml-5\">\n      <p class=\"title\">Stake your NFTs</p>\n      <p class=\"mb-5\">\n        Choose this if you'd like to stake your NFTs at one of the existing\n        farms.\n      </p>\n      <router-link to=\"farmer\">\n        <button class=\"nes-btn is-primary\">Stake NFTs</button>\n      </router-link>\n    </div>\n  </div>\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from 'vue';\nimport { GEM_FARM_PROG_ID } from '@gemworks/gem-farm-ts';\nexport default defineComponent({\n  setup() {\n    return {\n      GEM_FARM_PROG_ID,\n    };\n  },\n});\n</script>\n<style scoped></style>\n"
+        }
+    ]
+}

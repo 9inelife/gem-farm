@@ -24,4 +24,15 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.nes-container{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+</style>

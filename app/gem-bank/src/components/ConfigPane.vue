@@ -1,17 +1,17 @@
 <template>
-  <div class="flex justify-center mb-10">
-    <div class="nes-select is-dark flex-1">
-      <select required id="cluster" v-model="chosenCluster">
-        <option :value="Cluster.Mainnet">Mainnet</option>
+  <div class="flex justify-center mb-10" style="color:#fcbb1f; ">
+    <div class="nes-select is-dark flex-1" style="color:#fcbb1f;">
+      <select required id="cluster" v-model="chosenCluster" class="bok">
+        <option :value="Cluster.Mainnet" >Mainnet</option>
         <option :value="Cluster.Devnet">Devnet</option>
         <option :value="Cluster.Testnet">Testnet</option>
         <option :value="Cluster.Localnet">Localnet</option>
       </select>
     </div>
 
-    <div class="nes-select is-dark flex-1">
-      <select required id="wallet" v-model="chosenWallet">
-        <option class="text-gray-500" :value="null">Choose wallet..</option>
+    <div class="nes-select is-dark flex-3">
+      <select required id="wallet" v-model="chosenWallet"  class="bok">
+        <option class="text-gray-500" :value="null" >Choose wallet..</option>
         <option :value="WalletName.Phantom">Phantom</option>
         <option :value="WalletName.Sollet">Sollet</option>
         <option :value="WalletName.SolletExtension">Sollet Extension</option>
@@ -62,4 +62,17 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.bok{
+  background-color:black; 
+  padding: 5px;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+}
+select.option{
+     background-color:black; 
+  padding: 5px;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+}
+</style>

@@ -97,4 +97,60 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.text-center{
+  color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+  width: 100%;
+  padding: 7px;
+  
+}
+.nes-field{
+  display: flex;
+ 
+   padding: 5px;
+
+}
+.title{
+   color: white;
+  border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+.nes-input{
+  padding: 5px;
+  border: 1px solid  #e2a004 ;
+  
+  width: 100%;
+  background-color: #131212;
+
+}
+
+.nes-container{
+  color: white;
+   border: 1px solid #fcbb1f;
+  border-radius: 1rem;
+  background-color: black;
+   width: 100%;
+   padding: 8px;
+   text-align: center;
+}
+.nes-btn {
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color:   #e2a004;
+   border-radius:1rem;
+   border:1px solid black;
+
+}
+
+</style>

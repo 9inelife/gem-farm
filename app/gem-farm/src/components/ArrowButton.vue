@@ -3,7 +3,7 @@
     <img
       src="../assets/play.png"
       alt="right"
-      :width="60"
+      :width="40"
       :height="60"
       :class="{ left: left, disabled: disabled }"
     />

@@ -9,7 +9,7 @@
       class="nes-btn is-primary mr-5"
       @click="moveNFTsOnChain"
     >
-      Move Gems!
+      Move Spotters!
     </button>
     <slot />
   </div>
@@ -19,7 +19,7 @@
     <!--left-->
     <NFTGrid
       title="Your wallet"
-      class="flex-1"
+      class="miz flex-1"
       :nfts="desiredWalletNFTs"
       @selected="handleWalletSelected"
     />
@@ -28,12 +28,12 @@
     <div class="m-2 flex flex-col">
       <ArrowButton
         :disabled="vaultLocked"
-        class="my-2"
+        class=" viz my-2"
         @click="moveNFTsFE(false)"
       />
       <ArrowButton
         :disabled="vaultLocked"
-        class="my-2"
+        class="viz my-2"
         :left="true"
         @click="moveNFTsFE(true)"
       />
@@ -43,7 +43,7 @@
     <NFTGrid
       v-if="bank && vault"
       title="Your vault"
-      class="flex-1"
+      class="miz flex-1"
       :nfts="desiredVaultNFTs"
       @selected="handleVaultSelected"
     >
@@ -303,14 +303,38 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.nes-btn {
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color:   #e2a004;
+   border-radius:1rem;
+   border:1px solid black;
+
+}
 .locked {
   @apply text-center bg-black text-white;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
+  height:100%;
+  position: relative;
+  float: right;
   left: 0;
-  opacity: 0.7;
-  z-index: 10;
+  opacity: 0.4;
+  z-index: "";
+}
+
+@media (max-width:600px){
+  .miz{
+    width: 80px;
+    height: 80px;
+    
+   
+  }
+  .viz{
+     width: 20px;
+  }
 }
 </style>
